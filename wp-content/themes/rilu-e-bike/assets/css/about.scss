@@ -1,0 +1,289 @@
+@import "var.scss";
+@import "mixin.scss";
+/*================================== ABOUT US PAGE ================================*/
+.about-banner{
+    h2{
+        color: #ffffff;
+        text-transform: capitalize;
+        font-size: 60px;
+        font-weight: 900;
+        margin-bottom: 12px;
+        margin-top: 0;
+    }
+}
+.top-line-about{
+    text-align: center;
+    h1{
+        font-size: 40px;
+        line-height: 56px;
+    }
+    p{
+        @include common-typography($black-color);
+        width: 65%;
+        margin: 0 auto;
+    }
+}
+.about-content{
+    background-color: $light-gray;
+    padding: 90px 0;
+    p{
+        @include common-typography($black-color);
+        margin-bottom: 0;
+        width: 88%;
+    }
+}
+.middle-lines{
+    text-align: center;
+    h2{
+        font-size: 40px;
+        line-height: 56px;
+        margin-bottom: 15px
+    }
+    p{
+        @include common-typography($black-color);
+        width: 82%;
+        margin: 0 auto;
+    }
+}
+.street-legal{
+    background-color: $gray-white;
+    padding: 90px 0;
+    .title{
+        h1{
+            text-align: center;
+            margin-bottom: 56px;
+        }
+    }
+    .content-section{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 68px;
+        .image{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba($color: $gray-color, $alpha: 0.2);
+            width: 120px;
+            height: 120px;
+            box-shadow: 0px 0px 0px 15px rgba($color: $gray-color, $alpha: 0.1);
+            border-radius: 100%;
+            margin: 0 15px;
+            img{
+                object-fit: contain;
+            }
+        }
+        .content{
+            width: 66%;
+            margin-left: 32px;
+            h3{
+                font-size: 24px;
+                line-height: 38px;
+                margin-bottom: 16px;
+            }
+            p{
+                font-size: 14px;
+                line-height: 22px;
+                color: $gray-color;
+            }
+        }
+    }
+}
+.e-bilke-team{
+    background-color: $gray-white;
+    .common-title{
+        padding: 0 0 90px 0;
+        background-color: $white-color
+    }
+    .container{
+        width: 1009px;
+        .team-slider{
+            padding: 100px 0 60px 0;
+            position: relative;
+            .content{
+                p{
+                    @include common-typography($black-color);
+                }
+                .bottom-name{
+                    margin-top: 42px;
+                    .name{
+                        font-size: 24px;
+                        line-height: 38px;
+                        font-weight: 700
+                    }
+                    .designation{
+                        font-size: 16px;
+                        line-height: 22px;
+                        font-weight: 500;
+                        color: $gray-color;
+                    }
+                }
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                background: url('../images/quote.svg') no-repeat center;
+                left: -130px;
+                top: 62px;
+                width: 100px;
+                height: 95px;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                background: url('../images/quote.svg') no-repeat center;
+                right: -130px;
+                bottom: 119px;
+                width: 100px;
+                height: 95px;
+                transform: rotate(180deg);
+            }
+            .slick-arrow{
+                position: absolute;
+                bottom: -32px;
+                text-align: center;
+                margin: 0 auto;
+                border: 0;
+                border-radius: 0;
+                height: 70px;
+                font-size: 0;
+                left: 0;
+                right: 0;
+                cursor: pointer;
+                &.slick-prev{
+                    width: 78px;
+                    margin-right: 50%;
+                    background: url('../images/next-arrow.svg') no-repeat 30% $black-color;
+                    transform: rotate(180deg);
+                    &.slick-disabled {
+                        background: url('../images/previous-arrow.svg') no-repeat 70% $black-color!important;
+                        pointer-events:none;
+                        transform: rotate(0deg);
+                    }
+                }
+                &.slick-next{
+                    width: 78px;
+                    margin-left: 50%;
+                    background: url('../images/next-arrow.svg') no-repeat 30% $black-color;
+                    &.slick-disabled {
+                        background: url('../images/previous-arrow.svg') no-repeat 70% $black-color!important;
+                        pointer-events:none;
+                        transform: rotate(180deg);
+                    }
+                }
+                &.disable-arrow{
+                    opacity: 0.2;
+                    pointer-events: none;
+                }
+                &.enable-arrow{
+                    pointer-events: all;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+.about-bottom{
+    .bottom-lines{
+        @include bottom-lines($margin:135px auto 90px auto);
+    }
+}
+
+/*=================================== RESPONSIVE =============================*/
+@media screen and (max-width:1024px){
+    .e-bilke-team {
+        .container{
+            width: 96%;
+            .team-slider{
+                &::before{
+                    left: 0;
+                    top: 0;
+                }
+                &::after{
+                    right: 0;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+@media screen and (max-width:991px){
+    .about-banner{
+        h2{
+            font-size: 26px;
+            line-height: normal;
+            margin-bottom: 0;
+        }
+    }
+    .top-line-about {
+        h1 {
+            font-size: 24px;
+            line-height: 36px;
+        }
+        P{
+            width: 100%;
+        }
+    }
+    .about-content {
+        p{
+           width: 100%;
+           text-align: center;
+        }
+    }
+    .middle-lines {
+        h2{
+            font-size: 24px;
+            line-height: 36px;
+        }
+        p{
+            width: 100%;
+        }
+    }
+    .street-legal {
+        .content-section{
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            .image{
+                margin-bottom: 40px;
+            }
+            .content{
+                width: 100%;
+                margin-left: 0;
+            }
+        }
+    }
+    .e-bilke-team {
+        .container{
+            width: 96%;
+            .team-slider{
+                &::before{
+                    left: 0;
+                    top: 0;
+                }
+                &::after{
+                    right: 0;
+                    bottom: 30px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .about-content{
+        .col-section{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px) {
+    .e-bilke-team {
+        .container{
+            width: 96%;
+        }
+    }
+}

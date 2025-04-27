@@ -1,0 +1,292 @@
+@import "var.scss";
+@import "mixin.scss";
+/*======================== CUSTOMER REVIEW PAGE =========================*/
+.customer-review-section{
+    position: relative;
+    .container{
+        position: relative;
+        .njt-google-places-reviews-wap{
+            padding: 0;
+            border-top: 0;
+            font-family: inherit;
+            .njt-header{
+                border-bottom: 0;
+                margin-bottom: 80px;
+                .njt-header-image{
+                    display: none;
+                }
+                .njt-header-content{
+                    margin-left: 0;
+                    &::after{
+                        display: none;
+                    }
+                    .njt-header-title{
+                        font-size: 40px;
+                        line-height: 56px;
+                        font-weight: 700;
+                        a{
+                            color: $black-color;
+                            &:hover{
+                                color: #e7711b;
+                            }
+                        }
+                    }
+                    .njt-fr-starsnumb{
+                        span{
+                            font-size: 18px;
+                            line-height: 28px;
+                            color: $black-color;
+                            margin-right: 5px;
+                        }
+                    }
+                    .njt-fr-starslist-wrapper{
+                        padding-top: 4px;
+                        height: 27px;
+                        .njt-fr-starslist-container{
+                            height: 16px;
+                            .njt-fr-starslist-current{
+                                height: 16px;
+                                .njt-fr-star{
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url('../images/fill-star.svg') no-repeat 0 0;
+                                    margin-right: 8px;
+                                }
+                            }
+                            .njt-fr-starslist-background{
+                                height: 16px;
+                                .njt-fr-star{
+                                    width: 16px;
+                                    height: 16px;
+                                    background: url('../images/unfill-star.svg') no-repeat 0 0;
+                                    margin-right: 8px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .njt-reviews-wrap{
+                display: flex;
+                flex-wrap: wrap;
+                .njt-review{
+                    width: 31%!important;
+                    background-color: $gray-white;
+                    border: 1px solid #e2e2e2;
+                    border-radius: 4px;
+                    min-height: 208px;
+                    margin: 15px;
+                    padding: 24px;
+                    .njt-review-header{
+                        .njt-review-avatar{
+                            width: 70px;
+                            height: 70px;
+                        }
+                        .njt-review-info{
+                            margin-left: 90px;
+                            .grp-reviewer-name{
+                                margin-bottom: -5px;
+                                a{
+                                    font-size: 18px;
+                                    line-height: 32px;
+                                    color: $black-color;
+                                    font-weight: 400;
+                                }
+                            }
+                            .gpr-rating-time{
+                                margin-top: 0;
+                                font-size: 12px;
+                                color: $gray-color;
+                            }
+                            .njt-fr-starslist-wrapper{
+                                padding-top: 4px;
+                                height: 27px;
+                                .njt-fr-starslist-container{
+                                    height: 16px;
+                                    .njt-fr-starslist-current{
+                                        height: 16px;
+                                        .njt-fr-star{
+                                            width: 16px;
+                                            height: 16px;
+                                            background: url('../images/fill-star.svg') no-repeat 0 0;
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                    .njt-fr-starslist-background{
+                                        height: 16px;
+                                        .njt-fr-star{
+                                            width: 16px;
+                                            height: 16px;
+                                            background: url('../images/unfill-star.svg') no-repeat 0 0;
+                                            margin-right: 8px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .njt-review-content{
+                        padding-top: 24px;
+                        font-size: 16px;
+                        .review-item{
+                            font-size: 16px;
+                            line-height: 22px;
+                            color: $gray-color;
+                        }
+                        .btn-reivew{
+                            color: $red-color;
+                            font-weight: 600;
+                            text-decoration: none;
+                            line-height: 22px;
+                            font-size: 16px;
+                        }
+                    }
+                    &:nth-child(1){
+                        margin-left: 0;
+                    }
+                    &:nth-child(3n+4){
+                        margin-left: 0;
+                    }
+                    &:nth-child(3n){
+                        margin-right: 0;
+                    }
+                }
+            }
+            .njt-read-all-reviews{
+                text-align: center;
+                margin-top: 90px;
+                a{
+                    @include theme-button;
+                    text-decoration: none;
+                    &:hover{
+                        @include theme-button-hover;
+                    }
+                }
+            }
+        }
+        .review-us-btn{
+            position: absolute;
+            top: 17px;
+            right: 30px;
+            a{
+                width: 196px;
+                height: 54px;
+                text-align: center;
+                line-height: 23px;
+            }
+        }
+    }
+    &::before{
+        position: absolute;
+        content: "";
+        background: $gray-white;
+        width: 100%;
+        left: 0;
+        height: 437px;
+        top: 145px;
+    }
+}
+.review-slider-section{
+    background-color: $gray-white;
+    padding: 60px 0 40px;
+    .review-slider{
+        @include slider($height:505px, $font-size:24px, $line-height:38px, $font-weight:700, $margin-left:98px, $object-fit:cover);
+    }
+}
+.review-bottom-line{
+    @include bottom-lines($margin:90px auto);
+}
+
+/*=================================== RESPONSIVE =============================*/
+@media screen and (max-width:991px){
+    .customer-review-section {
+        .container {
+            .njt-google-places-reviews-wap {
+                .njt-read-all-reviews {
+                    margin-top: 30px;
+                    a{
+                        font-size: 12px;
+                        padding: 10px 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width:768px) and (max-width:991px){
+    .customer-review-section {
+        .container {
+            .njt-google-places-reviews-wap {
+                .njt-reviews-wrap {
+                    .njt-review{
+                        width: 46% !important;
+                        margin: 14px;
+                        &:nth-child(1){
+                            margin-left: 14px;
+                        }
+                        &:nth-child(3n+4){
+                            margin-left: 14px;
+                        }
+                        &:nth-child(3n){
+                            margin-right: 14px;
+                        }
+                    }
+                    .njt-read-all-reviews {
+                        a{
+                            font-size: 12px;
+                            padding: 10px 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .review-slider-section {
+        .review-slider{
+            @include slider($height:400px, $object-fit:cover, $font-size:24px, $line-height:32px, $margin-left:0, $font-weight:700);
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .customer-review-section {
+        .container {
+            .njt-google-places-reviews-wap {
+                .njt-reviews-wrap {
+                    .njt-review{
+                        width: 100% !important;
+                        &:nth-child(1){
+                            margin-left: 15px;
+                        }
+                        &:nth-child(3n+4){
+                            margin-left: 15px;
+                        }
+                        &:nth-child(3n){
+                            margin-right: 15px;
+                        }
+                    }
+                }
+            }
+            .review-us-btn {
+                right: 5px;
+                top: 10px;
+                a{
+                    width: 132px;
+                    height: auto;
+                }
+            }
+        }
+    }
+    .review-slider-section {
+        .review-slider {
+            .slide-content {
+                .col-section {
+                    p{
+                        margin-left: 0;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

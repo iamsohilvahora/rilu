@@ -1,0 +1,661 @@
+@import "var.scss";
+@import "mixin.scss";
+/*=================================== DEALER PAGE =====================================*/
+.dealer-banner{
+    h2{
+        color: #ffffff;
+        font-size: 60px;
+        font-weight: 900;
+        margin-bottom: 36px;
+        margin-top: 0;
+    }
+    .search-area{
+        padding: 0;
+        .pincode-dropdown{
+            margin-bottom: 0;
+            .btn1{
+                background-color: $white-color;
+                border: 1px solid $gray-color;
+                width: 530px;
+                text-transform: inherit;
+            }
+            .close-wrapper{
+                position: absolute;
+                right: 10px;
+                top: 11px;
+                z-index: 3;
+                .close-search{
+                    font-size: 20px;
+                    text-decoration: none;
+                    color: #fff;
+                    background-color: #000;
+                    height: 30px;
+                    width: 30px;
+                    border-radius: 100%;
+                    display: inline-block;
+                    line-height: 30px;
+                }
+            }
+            ul{
+                width: 530px;
+            }
+        }
+    }
+}
+.dealer-section{
+    .links-section{
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        li{
+            list-style: none;
+            margin: 0 20px;
+            a{
+                text-decoration: none;
+                color: rgba($color: $gray-color, $alpha: 0.5);
+                text-transform: uppercase;
+                font-size: 18px;
+                line-height: 42px;
+            }
+            &:last-child{
+                a{
+                    text-transform: capitalize;
+                }
+            }
+            &.active{
+                border-bottom: 1px solid $black-color;
+                a{
+                    color: $black-color;
+                }
+            }
+        }
+    }
+    .border-bottom{
+        border-bottom: 1px solid $light-gray;
+    }
+    .default-view{
+        margin-top: 90px;
+        height: 480px;
+        background-color: $gray-white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        &.dealer-not-found{
+            width: 100%;
+        }
+        .no-data-content{
+            margin-top: 16px;
+            font-size: 24px;
+            text-align: center;
+            padding: 15px;
+        }
+    }
+    .selected-view{
+        .dealer-title{
+            text-align: center;
+            margin: 56px 0;
+            h1{
+                font-size: 24px;
+                line-height: 28px;
+                margin-bottom: 18px;
+            }
+        }
+        .show-dealer-section{
+            .result-count{
+                font-size: 18px;
+                line-height: 32px;
+                margin: 56px 0 90px 0;
+                text-align: center;
+            }
+            .show-dealer-result{
+                background-color: $gray-white;
+                padding: 0 0 90px 0;
+                .result-section{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .result{
+                        width: 33.33%;
+                        padding: 5px;
+                        margin-top: 90px;
+                        position: relative;
+                        .result-items{
+                            max-width: 90%;
+                            .title{
+                                font-size: 24px;
+                                line-height: 38px;
+                                color: $black-color;
+                                text-decoration: none;
+                                &:hover{
+                                    color: $red-color;
+                                }
+                            }
+                            span{
+                                display: block;
+                                color: $gray-color;
+                                font-size: 14px;
+                                line-height: 22px;
+                                margin-bottom: 16px;
+                            }
+                            .contact-detail{
+                                margin-bottom: 17px;
+                                p{
+                                    font-size: 14px;
+                                    line-height: 22px;
+                                    margin-bottom: 6px;
+                                    a{
+                                        color: $black-color;
+                                        text-decoration: none;
+                                        &:hover{
+                                            color: $red-color;
+                                        }
+                                    }
+                                }
+                            }
+                            .visit-website{
+                                padding: 17px 0;
+                                position: relative;
+                                a{
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    color: $black-color;
+                                    text-decoration: none;
+                                    font-weight: 600;
+                                    text-transform: capitalize;
+                                    img{
+                                        margin-left: 16px;
+                                        vertical-align: middle;
+                                        transition: all ease 0.3s;
+                                    }
+                                    &:hover{
+                                        color: $red-color;
+                                        img{
+                                            margin-left: 20px;
+                                        }
+                                    }
+                                }
+                                &::before{
+                                    content:"";
+                                    position: absolute;
+                                    border-top: 1px solid #c7c7c7;
+                                    left: 0;
+                                    top: 0;
+                                    width: 75%;
+                                }
+                                &::after{
+                                    content:"";
+                                    position: absolute;
+                                    border-bottom: 1px solid #c7c7c7;
+                                    left: 0;
+                                    bottom: 0;
+                                    width: 75%;
+                                }
+                            }
+                            .directions{
+                                margin-top: 17px;
+                                a{
+                                    font-size: 16px;
+                                    line-height: 22px;
+                                    color: $black-color;
+                                    text-decoration: none;
+                                    font-weight: 600;
+                                    text-transform: capitalize;
+                                    img{
+                                        margin-left: 16px;
+                                        vertical-align: middle;
+                                        transition: all ease 0.3s;
+                                    }
+                                    &:hover{
+                                        color: $red-color;
+                                        img{
+                                            margin-left: 20px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:nth-of-type(3n+2){
+                            &::before{
+                                content:"";
+                                position: absolute;
+                                border-left: 1px solid #c7c7c7;
+                                left: -45px;
+                                top: 0;
+                                height: 100%;
+                            }
+                            &::after{
+                                content:"";
+                                position: absolute;
+                                border-right: 1px solid #c7c7c7;
+                                right: 45px;
+                                top: 0;
+                                height: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .dealer-important-info{
+            .common-title{
+                padding: 90px 0 40px 0;
+                span{
+                    font-size: 24px;
+                    img{
+                        margin-left: 30px;
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+            p{
+                color: $gray-color;
+                font-size: 18px;
+                line-height: 32px;
+                margin-bottom: 30px;
+                strong{
+                    color: $black-color;
+                }
+            }
+        }
+        .dealer-bottom{
+            width: 92%;
+            margin: 90px auto 0 auto;
+            h3{
+                text-align: center;
+                font-size: 18px;
+                line-height: 32px;
+                strong{
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+#dealer_map_canvas{ 
+    height: 570px;
+    width: 100%;
+}
+
+/*========================== DEALER DETAIL ===========================*/
+.dealer-detail-banner{
+    h1{
+        text-transform: initial;
+        margin-bottom: 10px;
+    }
+}
+.address-info{
+    .map-area{
+        filter: grayscale(1);
+    }
+    .contact-area{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .contact-info{
+            h2{
+                font-size: 40px;
+                text-transform: capitalize;
+                line-height: 56px;
+                margin-bottom: 27px;
+            }
+            .contact-line{
+                color: $gray-color;
+                margin-bottom: 32px;
+                font-size: 18px;
+                img{
+                    vertical-align: top;
+                    margin-right: 15px;
+                }
+                a{
+                    color: $gray-color;
+                    text-decoration: none;
+                    &:hover{
+                        color: $red-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.dealer-description{
+    h3{
+        font-size: 24px;
+        line-height: 38px;
+        margin-bottom: 32px;
+    }
+    p{
+        color: $gray-color;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: justify;
+    }
+}
+
+/*============================== DEALER REGISTRATION ===========================*/
+.dealer-registration-banner{
+    h1{
+        text-transform: initial;
+    }
+}
+.dealer-form{
+    .form-title{
+        text-align: center;
+        margin-bottom: 42px;
+        h2{
+            font-size: 24px;
+            line-height: 38px;
+        }
+        span{
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray-color;
+        }
+    }
+    .form-section{
+        .wpcf7-form{
+            .dealer-contact-form{
+                display: flex;
+                flex-wrap: wrap;
+                .left-form{
+                    width: 50%;
+                    h3{
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-bottom: 20px;
+                    }
+                    .wpcf7-form-control-wrap{
+                        input,textarea{
+                            padding: 16px 16px 16px 24px;
+                            border: 1px solid $gray-color;
+                            border-radius: 4px;
+                            color: $gray-color;
+                            background-color: $light-gray;
+                            width: 94%;
+                            margin-bottom: 17px;
+                        }
+                    }
+                }
+                .right-form{
+                    width: 50%;
+                    h3{
+                        font-size: 16px;
+                        line-height: 22px;
+                        margin-bottom: 20px;
+                    }
+                    .wpcf7-form-control-wrap{
+                        input,textarea{
+                            padding: 16px 16px 16px 24px;
+                            border: 1px solid $gray-color;
+                            border-radius: 4px;
+                            color: $gray-color;
+                            background-color: $light-gray;
+                            width: 94%;
+                            margin-bottom: 17px;
+                        }
+                        textarea{
+                            height: 132px;
+                        }
+                    }
+                }
+            }
+            .form-send-btn{
+                text-align: center;
+                .wpcf7-submit{
+                    background-color: $black-color;
+                    border: 1px solid $black-color;
+                    color: $white-color;
+                    font-size: 16px;
+                    line-height: 22px;
+                    padding: 16px 77px;
+                    font-weight: 600;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    &:hover{
+                        background-color: $red-color;
+                        border: 1px solid $red-color;
+                    }
+                }
+            }
+        }
+    }
+}
+.more-retailer{
+    background-color: $black-color;
+    padding: 60px 0;
+    .title{
+        text-align: center;
+        h2{
+            font-size: 24px;
+            line-height: 38px;
+            color: $white-color;
+            margin-bottom: 28px;
+        }
+        span{
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray-color;
+        }
+    }
+}
+.support-registration{
+    .left-content{
+        img{
+            height: 832px;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .right-content{
+        text-align: left;
+        margin-left: 58px;
+        .common-title{
+            text-align: left;
+            margin-bottom: 32px;
+        }
+        .list{
+            padding: 0;
+            margin: 0 0 32px 20px;
+            li{
+                @include common-typography($color:$black-color);
+            }
+        }
+        p{
+            font-size: 18px;
+            line-height: 28px;
+            color: $gray-color;
+            strong{
+                color: $black-color;
+                font-weight: 400;
+            }
+            a{
+                color: $black-color;
+                text-decoration: none;
+                &:hover{
+                    color: $red-color;
+                }
+            }
+        }
+    }
+    .bottom-lines{
+        @include bottom-lines($margin:60px auto);
+    }
+}
+
+/*=================================== RESPONSIVE =============================*/
+@media screen and (max-width:1024px){
+    .dealer-section {
+        .selected-view {
+            .show-dealer-section {
+                .show-dealer-result {
+                    .result-section {
+                        .result{
+                            &:nth-of-type(3n+2){
+                                &::before{
+                                    left: -10px;
+                                }
+                                &::after{
+                                    right: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:991px){
+    .dealer-banner{
+        h2{
+            font-size: 26px;
+            line-height: normal;
+            margin-bottom: 20px;
+        }
+    }
+    .support-registration {
+        .right-content{
+            margin-left: 0;
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:991px){
+    .dealer-section {
+        .selected-view {
+            .show-dealer-section {
+                .show-dealer-result {
+                    .result-section {
+                        .result{
+                            width: 50%;
+                            &:nth-of-type(2n){
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    border-left: 1px solid #c7c7c7;
+                                    width: 100%;
+                                    left: -15px;
+                                    height: 100%;
+                                }
+                            }
+                            &:nth-of-type(3n+2){
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .dealer-banner{
+        h2{
+            font-size: 40px;
+        }
+        .search-area{
+            display: block;
+            .pincode-dropdown{
+                display: block;
+                padding: 0px 5px;
+                max-width: 350px;
+                margin: 0px auto;
+                .btn1{
+                    width: 100%;
+                    padding: 18px 40px 18px 43px;
+                    max-width: 340px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+                ul{
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .dealer-section{
+        .links-section {
+            flex-wrap: wrap;
+            li{
+                margin: 0 19px;
+            }
+        }
+    }
+    .dealer-section {
+        .selected-view {
+            .show-dealer-section {
+                .show-dealer-result {
+                    .result-section {
+                        .result{
+                            width: 100%;
+                            &::before{
+                                content: "";
+                                position: absolute;
+                                border-bottom: 1px solid #c7c7c7;
+                                width: 97%;
+                                bottom: -45px;
+                            }
+                            &:nth-of-type(3n+2){
+                                &::before{
+                                    content: "";
+                                    position: absolute;
+                                    border-bottom: 1px solid #c7c7c7;
+                                    width: 97%;
+                                    top: 45px;
+                                    left: auto;
+                                    border-left: none;
+                                }
+                                &::after{
+                                    display: none;
+                                }
+                            }
+                            .result-items{
+                                max-width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .dealer-form {
+        .form-section {
+            .wpcf7-form {
+                .dealer-contact-form{
+                    .left-form{
+                        width: 100%;
+                        .wpcf7-form-control-wrap {
+                            input{
+                                width: 100%;
+                            }
+                            textarea{
+                                width: 100%;
+                            }
+                        }
+                    }
+                    .right-form{
+                        width: 100%;
+                        .wpcf7-form-control-wrap {
+                            input{
+                                width: 100%;
+                            }
+                            textarea{
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+                .form-send-btn{
+                    .wpcf7-spinner{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,167 @@
+@import "var.scss";
+@import "mixin.scss";
+/*============================== E-BIKE TYPE =========================*/
+.tag-line{
+    h2{
+        font-size: 40px;
+        line-height: 56px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+        text-align: center;
+    }
+    .content{
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+        p{
+            @include common-typography($color:$black-color);
+        }
+    }
+}
+.ebike-info{
+    background-color: $gray-white;
+    padding: 90px 0;
+    .left-content{
+        width: 84%;
+        p{
+            color: $gray-color;
+            font-size: 18px;
+            line-height: 28px;
+            text-align: justify;
+            strong{
+                color: $black-color;
+                font-weight: 400;
+            }
+        }
+    }
+    .right-content{
+        img{
+            height: 521px;
+            object-fit: cover;
+            width: 100%;
+        }
+    }
+}
+.product_category_result{
+    text-align: center;
+}
+.product-category-slider{
+    .category-slider{
+        .slide-content{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            .slider-items{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    img{
+                        width: auto !important;
+                        margin: 0 auto !important;
+                        height: 300px !important;
+                    }
+                    h2{
+                        font-size: 18px !important;
+                        line-height: 32px;
+                        margin-top: 40px !important;
+                        color: $black-color;
+                    }
+                }
+                .product_type_variable{
+                    background: $black-color!important;
+                    border-radius: 4px!important;
+                    color: $white-color !important;
+                    font-size: 16px!important;
+                    font-weight: 700!important;
+                    padding-top: 16px!important;
+                    padding-right: 24px!important;
+                    padding-bottom: 16px!important;
+                    padding-left: 24px!important;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    border: none;
+                    letter-spacing: 2px;
+                    cursor: pointer;
+                    text-decoration: none;
+                    transition: 0.2s all ease-in-out;
+                    -webkit-transition: 0.2s all ease-in-out;
+                    -o-transition: 0.2s all ease-in-out;
+                    -ms-transition: 0.2s all ease-in-out;
+                    -moz-transition: 0.2s all ease-in-out;
+                    margin-top: 16px;
+                    &:hover{
+                        background-color: $red-color!important;
+                    }
+                }
+            }
+        }
+        .slick-dots{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 50px;
+            margin-left: 0;
+            li{
+                list-style: none;
+                button{
+                    font-size: 0;
+                    height: 4px;
+                    width: 60px;
+                    border: 0;
+                    border-radius: 0;
+                    background-color: rgba($color: $gray-color, $alpha: 0.5);
+                    outline: none;
+                }
+                &.slick-active{
+                    button{
+                        background-color: $black-color;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=================================== RESPONSIVE =============================*/
+@media screen and (max-width:991px) {
+    .tag-line{
+        .content{
+            width: 100%;
+        }
+        h2{
+            font-size: 24px;
+            line-height: 32px;
+        }
+    }
+    .ebike-info {
+        .left-content {
+            width: 100%;
+        }
+    }
+    .product-category-slider {
+        .category-slider {
+            .slide-content {
+                .slider-items {
+                    .product_type_variable{
+                        padding: 10px 15px!important;
+                        font-size: 12px!important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width:767px){
+    .product-category-slider {
+        .category-slider {
+            .slick-dots {
+                li {
+                    button{
+                        width: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

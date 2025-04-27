@@ -1,0 +1,35 @@
+@import "var.scss";
+@import "mixin.scss";
+/*============================= PRIVACY POLICY ===========================*/
+.privacy-policy-section{
+    .top-content{
+        margin-bottom: 75px;
+        p{
+            margin-bottom: 0;
+            color: $black-color;
+        }
+    }
+    p{
+        @include common-typography($gray-color)
+    }
+    span{
+        text-decoration: none!important;
+    }
+    a{
+        color: $red-color;
+        text-decoration: none;
+    }
+    ul{
+        margin-left: 10px;
+        @include common-typography($gray-color)
+    }
+}
+
+/*========================= RESPONSIVE DESIGN =========================*/
+@media screen and (max-width:767px){
+    .privacy-policy-section{
+        span{
+            display: block;
+        }
+    }
+}
